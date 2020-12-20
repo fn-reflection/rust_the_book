@@ -11,6 +11,7 @@ fn incurable_error() {
     // panic!("crash and burn"); // panicを引き起こす。
     let v = vec![1, 2, 3];
     // v[99]; // index out of bounds
+    println!("{:?}",v);
 }
 
 use std::fs::File;
@@ -95,7 +96,8 @@ fn main() {
     println!("{:?}", f);
     let f = read_username_from_file2();
     println!("{:?}", f);
-
+    let f = read_username_from_file3();
+    println!("{:?}", f);
     let home: IpAddr = "127.0.0.1".parse().unwrap(); // この場合parseに失敗することはないのでunwrapするのはあり
     println!("{}", home);
 
