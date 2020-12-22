@@ -1,0 +1,9 @@
+[package]
+name = "fn-reflection"
+version = "0.1.0"
+authors = ["Naoki Fujita <fujitanaoki0718@gmail.com>"]
+edition = "2018"
+description = "my toy project"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
