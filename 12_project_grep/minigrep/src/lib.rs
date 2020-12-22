@@ -9,20 +9,24 @@ pub struct Config {
     pub case_sensitive: bool
 }
 impl Config {
-    pub fn new(args: &[String]) ->  Result<Config, &'static str> { 
-        if args.len() < 3 { return Err("cargo run [search-string] [filename]"); }
+    pub fn new(mut args: std::env::Args) ->  Result<Config, &'static str> { // argsイテレータの所有権を奪い可変で参照する
+        args.next();
+        let query = match args.next() {
+            Some(arg) => arg,
+            None => return Err("Didn't get first param: querystring"),
+        };
+        let filename = match args.next() {
+            Some(arg) => arg,
+            None => return Err("Didn't get second param: filename"),
+        };
         let case_sensitive = env::var("CASE_INSENSITIVE").is_err();
-        let config =  Config { query: args[1].clone(), filename: args[2].clone(), case_sensitive };
+        let config = Config { query, filename, case_sensitive };
         Ok(config)
     }
 }
 
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-    let mut results = Vec::new();
-    for line in contents.lines() {
-        if line.contains(query) { results.push(line); }
-    }
-    results
+    contents.lines().filter(|line| line.contains(query)).collect()
 }
 
 pub fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
