@@ -1,5 +1,5 @@
-extern crate cargo_and_crateio;
+extern crate fn_reflection;
 
 fn main() {
-    println!("{}", cargo_and_crateio::add_one(2));
+    println!("{}", fn_reflection::add_one(2));
 }

@@ -1,5 +1,5 @@
 [package]
-name = "fn-reflection"
+name = "fn_reflection"
 version = "0.1.0"
 authors = ["Naoki Fujita <fujitanaoki0718@gmail.com>"]
 edition = "2018"
