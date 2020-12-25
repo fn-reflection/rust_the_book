@@ -68,7 +68,7 @@ fn force_drop(){
 enum RcList<T> { Cons(T, Rc<RcList<T>>), Nil } // ジェネリクスタイプのLinkedList
 use std::rc::Rc;
 
-fn reference_counting(){ //Rc型はマルチスレッドでは使用できない。不変参照のみ認める。
+fn reference_counting(){ //Rc型はマルチスレッドでは使用できない。不変参照のみ認める。 マルチスレッドではArcを使用する
     let a = List::Cons(5, Box::new(List::Cons(10, Box::new(List::Nil))));
     let b = List::Cons(3, Box::new(a));
     // let c = List::Cons(4, Box::new(a)); // エラー、aがムーブしてしまうので
