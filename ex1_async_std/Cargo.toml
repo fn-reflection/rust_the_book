@@ -1,0 +1,8 @@
+[package]
+name = "ex1_async"
+version = "0.1.0"
+authors = ["Naoki Fujita <fujitanaoki0718@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+async-std = { version = "1", features = ["unstable"] }
