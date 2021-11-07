@@ -1,3 +1,7 @@
+## 参考文献
+https://github.com/forcia/rustbook/tree/master/ch06/6-2/mandelbrot
+
+こちらのリポジトリ(と書籍)を参考に自力でwasmを動かせるようにしています。
 ## 🚴 Usage
 ### 🛠️ Build with `wasm-pack build`
 
@@ -12,7 +16,7 @@ cd www
 npm install
 npm run start
 ```
-http://localhost:8080/
+http://localhost:8080/****
 
 
 ### 🔬 Test in Headless Browsers with `wasm-pack test`
