@@ -7,14 +7,9 @@
 </head>
 
 <body>
-  <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
   <button id="render">render</button>
-  <div>
-    <canvas id="canvas_wasm" height="1200" width="1200"></canvas>
-    <canvas id="canvas_js" height="1200" width="1200"></canvas>
-    <canvas id="canvas_hybrid" height="1200" width="1200"></canvas>
-  </div>
-  <script src="./bootstrap.js"></script>
+    <canvas id="wasm_canvas" height="800" width="800"/>
+  <script src="./bootstrap.js" defer></script>
 </body>
 
 </html>
