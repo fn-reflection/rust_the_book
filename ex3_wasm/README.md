@@ -5,6 +5,16 @@
 wasm-pack build
 ```
 
+### 🛠️ Run with `npm`
+```
+npm init wasm-app www
+cd www
+npm install
+npm run start
+```
+http://localhost:8080/
+
+
 ### 🔬 Test in Headless Browsers with `wasm-pack test`
 
 ```
