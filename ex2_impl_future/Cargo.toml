@@ -1,0 +1,10 @@
+[package]
+authors = ["Naoki Fujita <fujitanaoki0718@gmail.com>"]
+edition = "2018"
+name = "ex1_async"
+version = "0.1.0"
+
+[dependencies]
+crossbeam = "0.8"
+futures-lite = "1.11"
+waker-fn = "1.1"
