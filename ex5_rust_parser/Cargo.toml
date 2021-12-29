@@ -1,0 +1,10 @@
+[package]
+authors = ["Naoki Fujita <fujitanaoki0718@gmail.com>"]
+edition = "2021"
+name = "rust_comment_filter"
+version = "0.1.0"
+
+[dependencies]
+proc-macro2 = "1.0.36"
+quote = "1.0.14"
+syn = {version = "1.0.84", features = ["full", "extra-traits"]}
